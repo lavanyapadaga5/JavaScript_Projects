@@ -1,0 +1,28 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Download button with progress bar| Coding Lab</title>
+        <link rel="stylesheet" href="style.css">
+        <!--Boxicons CDN Link-->
+        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="button">
+            <div class="Content">
+                <i class="bx bx-cloud-download"></i>
+                <span Class="button-text">Download</span>
+            </div>
+        </div>
+        <script>
+            let button=document.querySelector(".button");
+            button.addEventListener("click" ,()=>{
+                button.classList.add("active");
+                setTimeout(()=>{
+                   button.classList.remove("active");
+                   document.querySelector("i").classList.replace("bx-cloud-download","bx-check-circle")
+                   document.querySelector(".button-text").innerText="Completed";
+                },6000)//1s=1000ms
+            })
+        </script>
+    </body>
+</html>
